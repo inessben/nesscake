@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/poppins.woff2");
+}
+
+@font-face {
+  font-family: "Handmade";
+  src: url("./fonts/handmade.woff2");
+}
+
+@font-face {
+  font-family: "Grand-hotel";
+  src: url("./fonts/grand-hotel.woff2");
+}
+
+@font-face {
+  font-family: "Amatic";
+  src: url("./fonts/amatic.woff2");
+}
+
+@font-face {
+  font-family: "Cupcake";
+  src: url("./fonts/cupcake.woff2");
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src: url("./fonts/sacramento.woff2");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/oswald.woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./fonts/dm-sans.woff2");
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("./fonts/heebo.woff2");
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A64A93;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  top: 0;
+  left: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,209,181,1) 150%);
+}
+
+header {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.logo {
+  height: 150px;
+}
+
+.link {
+  position: relative;
+  font-family: "Handmade";
+  left: 1000px;
+  font-size: 22px;
+  padding: 20px;
+  color: #A64A93;
+}
+
+.link:hover{
+  opacity: 0.7;
+}
+
+.Home-news {
+  position: relative;
+  color: #6C4A34;
+}
+
+.Home-news-title {
+  position: relative;
+  font-family: "Grand-hotel";
+  font-size: 52px;
+  font-weight: 700;
+
+}
+
+.Home-news-subtitle {
+  position: relative;
+  font-family: "Grand-hotel";
+  font-size: 36px;
+  color: #BAABA0;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.images {
+  position: relative;
+  /* display: inline-block; */
+  grid: repeat(3, 80px) / auto-flow 80px;
+}
+
+/* .image1-container, 
+.image2-container, 
+.image3-container {
+  display: inline-block;
+  position: relative;
+} */
+
+.image1-text,
+.image2-text,
+.image3-text
+ {
+  z-index: 1;
+  font-family: "Cupcake";
+  font-size: 24px;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  margin-right: 50px;
+  top: 70%;
+  background-color: #A64A9399;
+  color: white;
+  width: 100%;
+}
+
+.image1,
+.image2,
+.image3{
+  z-index: 0;
+  opacity: 0.8;
+  border-radius: 6px;
+  height: 350px;
+  margin: 50px;
+  border: #A64A93 solid 5px;
+  transition: transform 0.4s;
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.Home-frames {
+  position: relative;
+  color: #6C4A34;
+  z-index: 0;
+}
+
+.Home-frames-title {
+  position: relative;
+  font-family: "Grand-hotel";
+  top: 80px;
+  font-size: 36px;
+}
+
+.Home-frames .posts{
+  position: relative;
+  display: inline;
+  top: 100px;
+  padding-left: 50px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.footer img{
+  width: 25px;
+}
+
+.footer .description{
+  display: inline-block;
+  font-family: "Amatic";
+  font-weight: 6;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #A64A93;
+}
+
+.footer 
+.instagram,
+.whatsapp,
+.mail
+{
+  padding: 40px;
+}

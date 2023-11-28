@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/poppins.woff2");
+}
+
+@font-face {
+  font-family: "Handmade";
+  src: url("./fonts/handmade.woff2");
+}
+
+@font-face {
+  font-family: "Grand-hotel";
+  src: url("./fonts/grand-hotel.woff2");
+}
+
+@font-face {
+  font-family: "Amatic";
+  src: url("./fonts/amatic.woff2");
+}
+
+@font-face {
+  font-family: "Cupcake";
+  src: url("./fonts/cupcake.woff2");
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src: url("./fonts/sacramento.woff2");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/oswald.woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./fonts/dm-sans.woff2");
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("./fonts/heebo.woff2");
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6C4A34;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.logo {
+  height: 100px;
+}
+
+.link {
+  position: relative;
+  left: 1000px;
+  font-size: 18px;
+  padding: 20px;
+  color: #6C4A34;
+}
+
+.link:hover{
+  opacity: 0.7;
+}
+
+.Home-news {
+  position: relative;
+  color: #6C4A34;
+}
+
+.Home-news-title {
+  position: relative;
+  font-family: "Grand-hotel";
+  font-size: 48px;
+  font-weight: 700;
+
+}
+
+.Home-news-subtitle {
+  position: relative;
+  font-family: "Grand-hotel";
+  font-size: 34px;
+  color: #6C4A3477;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.images {
+  position: relative;
+  display: inline-block;
+  grid: repeat(3, 80px) / auto-flow 80px;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+  border-radius: 6px;
+  height: 350px;
+  margin: 6px;
+  overflow: hidden;
+  transition: transform 0.4s;
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover,
+.image4:hover {
+  transform: scale(1.2);
+}
+
+.Home-frames {
+  position: relative;
+  left: 50px;
+  color: #6C4A34;
+  z-index: 0;
+}
+
+.Home-frames-title {
+  position: relative;
+  top: 80px;
+  font-size: 30px;
+}
+
+.Home-frames .posts{
+  position: relative;
+  display: inline;
+  top: 100px;
+  padding-left: 50px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.footer img{
+  width: 25px;
+}
+
+.footer .description{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #A64A93;
+}
+
+.footer 
+.instagram,
+.whatsapp,
+.mail
+{
+  padding: 40px;
+}

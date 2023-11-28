@@ -1,0 +1,162 @@
+/* home css */
+@font-face {
+  font-family: "Cupcake";
+  src: url("./fonts/cupcake.woff2");
+}
+
+@font-face {
+  font-family: "Amatic";
+  src: url("./fonts/Amatic.woff2");
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6C4A34;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.logo {
+  height: 230px;
+}
+
+.link {
+  position: relative;
+  top: -120px;
+  left: 800px;
+  font-size: 28px;
+  font-family: "Amatic";
+  padding: 20px;
+  color: #6C4A34;
+}
+
+.link:hover{
+  opacity: 0.7;
+}
+
+.Home-news {
+  position: relative;
+  top: -60px;
+  left: 50px;
+  color: #6C4A34;
+}
+
+.Home-news-title {
+  position: absolute;
+  font-size: 46px;
+  font-family: "Amatic";
+  font-weight: 700;
+
+}
+
+.Home-news-subtitle {
+  position: relative;
+  font-size: 34px;
+  font-family: "Amatic";
+  color: #6C4A3477;
+  margin-bottom: ;
+  /* font-weight: 400; */
+}
+
+.images {
+  position: relative;
+  display: inline-block;
+  grid: repeat(3, 100px) / auto-flow 100px;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+  border-radius: 6px;
+  height: 300px;
+  margin: 6px;
+  overflow: hidden;
+  transition: transform 0.4s;
+  /* overflow: hidden; */
+
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover,
+.image4:hover {
+  /* overflow: hidden; */
+  transform: scale(1.2);
+}
+
+.Home-frames {
+  position: relative;
+  font-family: "Amatic";
+  left: 50px;
+  color: #6C4A34;
+  z-index: 0;
+}
+
+.Home-frames .posts{
+  display: inline;
+  padding-left: 50px;
+}
+
+.Home-frames-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+
+
+.footer {
+  display: flex;
+z-index: 99;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.footer img{
+  width: 25px;
+}
+
+.footer .description{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #A64A93;
+}
+
+.footer 
+.instagram,
+.whatsapp,
+.mail
+{
+  padding: 40px;
+}
