@@ -1,4 +1,4 @@
-import '../style/style.css';
+import '../style/inspirations.css';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 
@@ -54,7 +54,6 @@ function Inspirations() {
                 <img src={aidCakes} className="inspiration" alt="nesscake" />
                 <img src={spiderCake} className="inspiration" alt="nesscake" />
             </div>
-            <Footer />
         </div>
     );
 }

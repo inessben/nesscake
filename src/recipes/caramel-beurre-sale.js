@@ -9,7 +9,7 @@ export function CaramelBeurreSale() {
 
     return (
         <div className="recipes-card">
-            <h2 className="popin-opener" onClick={() => setShowPopin(true)}>Caramel au beurre salé</h2>
+            <h2 className="popin-opener" onClick={() => setShowPopin(true)}>Caramel beurre salé</h2>
             {showPopin && (
                 <div className="popin is-open">
                     <div className="popin-content">

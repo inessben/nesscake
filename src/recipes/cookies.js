@@ -21,29 +21,22 @@ export function Cookies() {
                             <br />
                             - 120g de beurre
                             <br />
-                            - 180g de chocolat
-                            <br />
                             - 180g de farine
                             <br />
                             - Levure chimique
                             <br />
-                            - Arôme de vanille
-                            <br />
-                            - 1 pincéee de sel
+                            - 1 pincée de sel
                             <br />
                             - Pépite de chocolat
                             <br />
-                            - 50g de noisettes concassées
-                            <br />
+                            - Noisettes concassées
                         </p>
                         <p className="popin-procedure">
                             - A feu moyen, faire fondre le beurre jusqu'à qu'il devienne noisette (brun).
                             <br />
-                            - Dans un récipient, ajouter le beurre noisette et le sucre, mélanger à la cuillère en bois.
+                            - Dans un récipient, mélanger le beurre noisette et le sucre.
                             <br />
-                            - Ajouter l'arôme et le sel.
-                            <br />
-                            - Incorporer l'oeuf et les pépites de chocolat.
+                            - Ajouter le sel, l'oeuf, les pépites de chocolat et les noisettes.
                             <br />
                             - Puis la farine et la levure chimique.
                             <br />

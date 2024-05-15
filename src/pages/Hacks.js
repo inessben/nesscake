@@ -1,4 +1,4 @@
-import '../style/style.css';
+import '../style/hacks.css';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 import chantilly from '../images/chantilly.jpeg';
@@ -60,22 +60,9 @@ function Hacks() {
                     <p>Faites toujours votre crème mascarpone 5mn avant utilisation. Plus vous la laissez au frais, moins elle sera utilisable.</p>
                 </div>
             </div>
-            <Footer />
-
         </div>
-
     );
 }
 
 export default Hacks;
 
-
-// css
-// .card {
-//   background-color: lightgray;
-//   padding: 10px;
-//   margin: 10px;
-//   border: 1px solid black;
-//   font-size: 16px;
-//   color: black;
-// }
