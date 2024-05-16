@@ -15,17 +15,6 @@ export function Frames() {
                         style={{ borderRadius: '6px' }}
                         title="Instagram Embed"
                     ></iframe>
-                    {/* tiktok */}
-                    <iframe
-                        className="o-tiktok"
-                        title="MaVidéoTikTok"
-                        width="500"
-                        height="550"
-                        style={{ borderRadius: '6px' }}
-                        src="https://www.tiktok.com/embed/v2/ZGJEhSRad?"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
                 </div>
             </div>
         </div>
