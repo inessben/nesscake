@@ -21,7 +21,7 @@ export function Genoise() {
                             <br />
                             - 160g de farine
                             <br />
-                            - 5g de levure chimique
+                            - 10g de levure chimique
                             <br />
                             - Arôme de vanille
                             <br />

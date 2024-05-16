@@ -19,7 +19,7 @@ export function ChantillyMascarpone() {
                             <br />
                             - 500g de mascarpone
                             <br />
-                            - 50cl de crème liquide entière
+                            - 500ml de crème liquide entière
                             <br />
                             - Arôme de vanille
                             <br />

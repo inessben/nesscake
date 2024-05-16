@@ -3,10 +3,12 @@ import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 import { Frames } from '../components/frames.js';
 import { About } from '../components/about.js';
+import '../style/home.css';
+
 import actu1 from '../images/actu1.png';
 import actu2 from '../images/actu2.png';
 import actu3 from '../images/actu3.png';
-import '../style/home.css';
+
 
 function Home() {
     return (

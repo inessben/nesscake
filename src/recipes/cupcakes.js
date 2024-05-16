@@ -23,7 +23,7 @@ export function Cupcakes() {
                             <br />
                             - 300g de farine
                             <br />
-                            - 10cl de crème liquide
+                            - 100ml de crème liquide
                             <br />
                             - 5g de levure chimique
                             <br />

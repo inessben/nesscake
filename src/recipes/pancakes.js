@@ -22,24 +22,24 @@ export function Pancakes() {
                             <br />
                             - 80g de farine
                             <br />
-                            - 15cl de lait
+                            - 150ml de lait
                             <br />
-                            - 30cl d’huile de tournesol
+                            - 300ml d’huile de tournesol
                             <br />
-                            - 5g de levure chimique
+                            - 10g de levure chimique
                             <br />
                             - Arôme de vanille
                         </p>
                         <p className="popin-procedure">
                             - Battre les œufs et le sucre jusqu’à que le mélange blanchisse.
                             <br />
-                            - Ajouter le lait et l'huile.
+                            - Ajouter le lait, l'huile et l'arôme.
                             <br />
                             - Puis la farine et la levure.
                             <br />
                             - Transvaser le mélange dans une bouteille vide, pour faire des cercles parfaits.
                             <br />
-                            - Sur feu moyen, faire cuire <span className="underline">3 minutes de chaque coté à feu moyen.</span>
+                            - Sur feu moyen, faire cuire <span className="underline">3 minutes environ de chaque coté à feu moyen.</span>
                         </p>
                         <button className="close" onClick={closePopin}>x</button>
                     </div>

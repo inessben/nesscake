@@ -29,7 +29,7 @@ export function Brownies() {
                             <br />
                             - 10g de Nutella
                             <br />
-                            - 1 pincéee de sel
+                            - 1 pincée de sel
                             <br />
                             - 50g de noisettes concassées
                         </p>

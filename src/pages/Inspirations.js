@@ -1,6 +1,5 @@
 import '../style/inspirations.css';
 import { Header } from '../components/header.js';
-import { Footer } from '../components/footer.js';
 
 import greenCookies from '../images/green-cookies.png';
 import pinacolaCake from '../images/pinacolacake.png';

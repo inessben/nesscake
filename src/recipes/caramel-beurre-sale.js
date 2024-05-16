@@ -21,7 +21,7 @@ export function CaramelBeurreSale() {
                             <br />
                             - 1 pincée de fleur de sel
                             <br />
-                            - 30cl de crème liquide entière 30% mg
+                            - 300ml de crème liquide entière 30% mg
                             <br />
                         </p>
                         <p className="popin-procedure">

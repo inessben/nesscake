@@ -17,11 +17,11 @@ export function Gaufres() {
                         <p className="popin-ingredients">
                             - 3 oeufs
                             <br />
-                            - 170g de farine
+                            - 190g de farine
                             <br />
-                            - 40g de sucre
+                            - 70g de sucre
                             <br />
-                            - 240 cl de lait
+                            - 240ml de lait
                             <br />
                             - 60g de beurre
                             <br />
@@ -29,7 +29,7 @@ export function Gaufres() {
                             <br />
                             - Arôme de vanille
                             <br />
-                            - Levure chimique
+                            - 100g de levure chimique
                             <br />
                         </p>
                         <p className="popin-procedure">

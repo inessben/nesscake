@@ -166,7 +166,7 @@ body {
 
 .popin-ingredients {
     border-right: 2px solid #6C4A34;
-    width: 7em;
+    /* width: 7em; */
 }
 
 .popin .close {
@@ -234,11 +234,16 @@ body {
     }
 
     .my-recipes {
-        margin-left: -1.5em;
+        margin-left: -2em;
     }
 
     .popin-opener {
         width: 15em;
+    }
+
+    .popin .close {
+        /*  */
+        right: -3em;
 
     }
 
@@ -248,6 +253,8 @@ body {
 
     .popin {
         height: 70vh;
+        width: 70vw;
+        margin-left: -2em;
     }
 }
 
@@ -259,7 +266,7 @@ body {
     .popin-opener {
         font-size: 1.6em;
         width: 15em;
-        margin-left: -1.4em;
+        /* margin-left: -1.4em; */
     }
 
     .popin-content {

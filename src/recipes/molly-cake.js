@@ -21,9 +21,9 @@ export function MollyCake() {
                             <br />
                             - 250g de farine
                             <br />
-                            - 25cl de crème liquide entière 30% mg
+                            - 250ml de crème liquide entière 30% mg
                             <br />
-                            - 5g de levure chimique
+                            - 10g de levure chimique
                             <br />
                             - Arôme de vanille
                             <br />

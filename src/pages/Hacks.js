@@ -1,6 +1,6 @@
 import '../style/hacks.css';
 import { Header } from '../components/header.js';
-import { Footer } from '../components/footer.js';
+
 import chantilly from '../images/chantilly.jpeg';
 import cupcakes from '../images/cupcakes.jpeg';
 import fondant from '../images/fondant-chocolat.jpeg';

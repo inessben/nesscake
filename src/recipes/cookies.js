@@ -23,7 +23,7 @@ export function Cookies() {
                             <br />
                             - 180g de farine
                             <br />
-                            - Levure chimique
+                            - 10g de levure chimique
                             <br />
                             - 1 pincée de sel
                             <br />

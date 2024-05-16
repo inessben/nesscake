@@ -17,15 +17,13 @@ export function PainPerdu() {
                         <p className="popin-ingredients">
                             - 2 oeufs
                             <br />
-                            - 20cl de lait
+                            - 200ml de lait
                             <br />
                             - 20g de sucre
                             <br />
                             - Beurre
                             <br />
                             - Brioche
-                            <br />
-                            - 1 pincée de sel
                             <br />
                             - Arôme de vanille
                             <br />

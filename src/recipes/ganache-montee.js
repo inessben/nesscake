@@ -17,7 +17,7 @@ export function GanacheMontee() {
                         <p className="popin-ingredients">
                             - 300g de chocolat
                             <br />
-                            - 30cl crème liquide entière 30%mg
+                            - 300ml crème liquide entière 30%mg
                             <br />
                         </p>
                         <p className="popin-procedure">
