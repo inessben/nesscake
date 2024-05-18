@@ -5,7 +5,7 @@ export function About() {
             <h3 className="about-title">En savoir plus sur Nesscake : </h3>
             <br />
             <br />
-            <p className="about-text" > Je vous invite à entrer dans mon univers les Nesscake's, là
+            <p className="about-text" > Je vous invite dans mon univers les Nesscake's, là
                 où les recettes sont un délice ! &#x1F469;&#x1F3FD;&#x200D;&#x1F373;
                 <br />
                 Vous y trouverez des adresses à ne pas louper actualisées chaque semaines,
