@@ -462,15 +462,21 @@ body {
     left: -0.8em;
   }
 
-  .o-insta,
-  .o-tiktok {
+  .o-insta {
     width: 260px;
     height: 340px;
+    margin-left: -2em;
+
   }
 
   .Home-frames {
     position: relative;
     justify-content: left;
+  }
+
+  .footer {
+    margin-left: -2em;
+
   }
 }
 
