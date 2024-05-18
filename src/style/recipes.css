@@ -128,9 +128,8 @@ body {
     width: 60vw;
     height: 90vh;
     padding: 20px 40px;
-    background: #D788C3;
-    border: 1px solid #DDD1B5;
-    color: #DDD1B5;
+    background: #DDD1B5;
+    border: 1px solid #6C4A34;
     box-sizing: border-box;
     border-radius: 1em;
     transform: translate(-50%, -50%);
@@ -141,7 +140,7 @@ body {
     display: inline;
     top: -1em;
     text-decoration: underline;
-    color: #a60085;
+    color: #D788C3;
     font-size: 1.4em;
 
 }
@@ -166,7 +165,7 @@ body {
 }
 
 .popin-ingredients {
-    border-right: 2px solid #DDD1B5;
+    border-right: 2px solid #6C4A34;
     /* width: 7em; */
 }
 
@@ -177,10 +176,10 @@ body {
     width: 2em;
     height: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    background: #DDD1B5;
+    background: #D788C3;
     border-radius: 50%;
     border: 1px solid #DDD1B5;
-    color: #D788C3;
+    color: #DDD1B5;
     cursor: pointer;
 }
 
@@ -239,12 +238,14 @@ body {
     }
 
     .popin-opener {
-        /* margin-left: -1.5em; */
+        margin-left: -1.5em;
         width: 15em;
     }
 
     .popin .close {
+        /*  */
         right: -3em;
+
     }
 
     .recipes-card {
