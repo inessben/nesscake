@@ -8,7 +8,7 @@ export function About() {
             <p className="about-text" > Je vous invite à entrer dans mon univers les Nesscake's, là
                 où les recettes sont un délice !
                 <br />
-                Vous y trouverez des adresses à ne pas louper actualisées chaque semaines,
+                Vous y trouverez des adresses à ne pas louper chaque semaines,
                 des inspirations photos/vidéos de gâteaux, des astuces, et des recettes. &#128523;
                 <br />
                 Evidemment, <span className="underline">je les ai toutes écrites et ajustés pour qu'elles soient
