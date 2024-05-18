@@ -47,7 +47,7 @@ body {
     left: 2em;
     width: 90vw;
     height: 100vh;
-    background: #e5decd;
+    background: #e8e4dc;
     background-attachment: fixed;
 }
 
@@ -238,6 +238,7 @@ body {
     }
 
     .popin-opener {
+        margin-left: -1.5em;
         width: 15em;
     }
 

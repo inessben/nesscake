@@ -53,7 +53,8 @@ body {
   left: 2em;
   width: 90vw;
   height: 100vh;
-  background: #e5decd;
+  background: linear-gradient(#e8e4dc, #DDD1B5);
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -192,10 +193,9 @@ body {
   text-align: center;
 }
 
-.o-insta,
-.o-tiktok {
+.o-insta {
   margin: 2em;
-  width: 500px;
+  width: 900px;
   height: 525px;
   border: 3px #A64A93 solid;
 }
@@ -441,10 +441,15 @@ body {
     font-size: 1.5em;
   }
 
+  .about-title,
+  .Home-frames-title {
+    font-size: 1.6em;
+  }
+
   .images {
     position: relative;
     display: flex;
-    margin-left: 0em;
+    margin-left: -2em;
 
   }
 
