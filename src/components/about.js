@@ -5,11 +5,11 @@ export function About() {
             <h3 className="about-title">En savoir plus sur Nesscake : </h3>
             <br />
             <br />
-            <p className="about-text" > Je vous invite dans mon univers les Nesscake's, là
-                où les recettes sont un délice ! &#x1F469;&#x1F3FD;&#x200D;&#x1F373;
+            <p className="about-text" > Je vous invite à entrer dans mon univers les Nesscake's, là
+                où les recettes sont un délice !
                 <br />
                 Vous y trouverez des adresses à ne pas louper actualisées chaque semaines,
-                des inspirations photos/vidéos de gâteaux, des astuces, et des recettes.
+                des inspirations photos/vidéos de gâteaux, des astuces, et des recettes. &#128523;
                 <br />
                 Evidemment, <span className="underline">je les ai toutes écrites et ajustés pour qu'elles soient
                     les meilleures (et les plus simples) que vous puissiez trouver. </span>  &#127874;
@@ -21,7 +21,7 @@ export function About() {
                 <br />
                 <span className="underline">Mes coordonnées sont en bas de page, n'hésitez pas si vous avez des questions ou des suggestions !</span>
                 <br />
-                Prêt.e.s à faire de grands bangers ? &#128523;
+                Prêt.e.s à faire de grands bangers ? &#x1F469;&#x1F3FD;&#x200D;&#x1F373;
             </p>
 
 
