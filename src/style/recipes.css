@@ -128,8 +128,9 @@ body {
     width: 60vw;
     height: 90vh;
     padding: 20px 40px;
-    background: #DDD1B5;
-    border: 1px solid #6C4A34;
+    background: #D788C3;
+    border: 1px solid #DDD1B5;
+    color: #DDD1B5;
     box-sizing: border-box;
     border-radius: 1em;
     transform: translate(-50%, -50%);
@@ -140,7 +141,7 @@ body {
     display: inline;
     top: -1em;
     text-decoration: underline;
-    color: #D788C3;
+    color: #a60085;
     font-size: 1.4em;
 
 }
@@ -176,10 +177,10 @@ body {
     width: 2em;
     height: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    background: #D788C3;
+    background: #DDD1B5;
     border-radius: 50%;
     border: 1px solid #DDD1B5;
-    color: #DDD1B5;
+    color: #D788C3;
     cursor: pointer;
 }
 
