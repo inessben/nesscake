@@ -147,6 +147,15 @@ body {
   transform: scale(1.2);
 }
 
+.square {
+
+  border:
+    1px solid #000;
+
+  padding:
+    10px;
+}
+
 .about {
   position: relative;
   margin-top: 5em;
