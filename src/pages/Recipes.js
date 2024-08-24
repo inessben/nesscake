@@ -12,7 +12,7 @@ import { Pancakes } from '../recipes/pancakes.js';
 import { Brownies } from '../recipes/brownies.js';
 import { Cupcakes } from '../recipes/cupcakes.js';
 import { Tiramisu } from '../recipes/tiramisu.js';
-import { PainPerdu } from '../recipes/pain-perdu.js';
+import { Crepes } from '../recipes/crepes.js';
 import { Gaufres } from '../recipes/gaufres.js';
 import { Cookies } from '../recipes/cookies.js';
 
@@ -26,7 +26,7 @@ function Recipes() {
                 <Brownies />
                 <Cupcakes />
                 <Tiramisu />
-                <PainPerdu />
+                <Crepes />
                 <Gaufres />
                 <Cookies />
                 <Genoise />
