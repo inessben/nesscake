@@ -153,7 +153,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #E3DBC9;
   margin-top: 6.5em;
   width: 80%;
 }
@@ -171,6 +170,7 @@ body {
   background: #eee;
   font-size: 1.6em;
   justify-content: center;
+  background: #E3DBC9;
   color: #A64A93;
   left: 1em;
   font-family: "Handmade";
