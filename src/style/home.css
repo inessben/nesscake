@@ -157,7 +157,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .about-title {
