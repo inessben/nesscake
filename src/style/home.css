@@ -153,10 +153,10 @@ body {
 }
 
 .about-section {
-  /* position: relative; */
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   flex-direction: row;
   width: 80%;
 }
@@ -177,9 +177,6 @@ body {
   font-size: 1.6em;
   background: #E3DBC9;
   color: #6C4A34;
-  /* left: 1em;
-  width: 80%; */
-
   font-family: "Handmade";
   border: 2px solid #6C4A34;
   box-shadow: 8px 8px 12px #6C4A3499;
