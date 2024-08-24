@@ -148,15 +148,14 @@ body {
 }
 
 .about {
-  position: relative;
+  /* position: relative; */
   margin-top: 9em;
-}
+  /* }
 
-.about-section {
+.about-section { */
   position: relative;
   display: flex;
   justify-content: center;
-  text-align: center;
   flex-direction: row;
   width: 80%;
 }
