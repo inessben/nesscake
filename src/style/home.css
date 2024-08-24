@@ -149,10 +149,6 @@ body {
 
 .about {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   margin-top: 9em;
 }
 
@@ -168,7 +164,10 @@ body {
 
 .about-text {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background: #eee;
   font-size: 1.6em;
   justify-content: center;
