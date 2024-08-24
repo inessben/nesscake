@@ -153,8 +153,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: #E3DBC9;
-  margin-top: 6em;
+  background-color: #E3DBC9;
+  margin-top: 6.5em;
   width: 80%;
 }
 
