@@ -149,7 +149,7 @@ body {
 
 .about {
   position: relative;
-  margin-top: 9em;
+  margin-top: 6em;
 }
 
 .about-section {
@@ -159,7 +159,6 @@ body {
   align-items: center;
   flex-direction: row;
   width: 80%;
-  margin-top: 9em;
 }
 
 .about-title {
