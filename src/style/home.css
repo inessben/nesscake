@@ -153,7 +153,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-top: 10em;
+  /* margin-top: 10em; */
   width: 80%;
 }
 
@@ -162,6 +162,8 @@ body {
   display: inline-block;
   font-family: "Grand-hotel";
   font-size: 2.2em;
+  margin-top: 6em;
+  color: #A64A93;
 }
 
 .about-text {
@@ -171,7 +173,7 @@ body {
   font-size: 1.6em;
   justify-content: center;
   background: #E3DBC9;
-  color: #A64A93;
+  color: #6C4A34;
   left: 1em;
   font-family: "Handmade";
   border: 2px solid #6C4A34;
@@ -195,6 +197,7 @@ body {
 .Home-frames-title {
   position: relative;
   font-family: "Grand-hotel";
+  color: #A64A93;
   margin-top: 2.2em;
   font-size: 2.2em;
 }
