@@ -9,8 +9,6 @@ export function Frames() {
                     <iframe
                         src="https://www.instagram.com/nsscake/embed"
                         className="o-insta"
-                        width="500"
-                        height="550"
                         scrolling="no"
                         style={{ borderRadius: '6px' }}
                         title="Instagram Embed"
