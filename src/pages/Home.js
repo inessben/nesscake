@@ -44,8 +44,6 @@ function Home() {
                         </a>
                     </div>
                 </div>
-                {/* <About /> */}
-                {/* <Frames /> */}
                 <Footer />
             </div>
         </div>
