@@ -21,22 +21,24 @@ function Recipes() {
         <div className="recipes">
             <Header />
             <h1 className="title-recipes">Les nesscake recette's</h1>
-            <div className="my-recipes">
-                <Pancakes />
-                <Brownies />
-                <Cupcakes />
-                <Tiramisu />
-                <Crepes />
-                <Gaufres />
-                <Cookies />
-                <Genoise />
-                <MollyCake />
-                <FondantChocolat />
-                <GanacheMontee />
-                <ChantillyMascarpone />
-                <CremeBeurre />
-                <CaramelBeurreSale />
-                <CremeNoisette />
+            <div className="content-recipes">
+                <div className="my-recipes">
+                    <Pancakes />
+                    <Brownies />
+                    <Cupcakes />
+                    <Tiramisu />
+                    <Crepes />
+                    <Gaufres />
+                    <Cookies />
+                    <Genoise />
+                    <MollyCake />
+                    <FondantChocolat />
+                    <GanacheMontee />
+                    <ChantillyMascarpone />
+                    <CremeBeurre />
+                    <CaramelBeurreSale />
+                    <CremeNoisette />
+                </div>
             </div>
         </div >
 

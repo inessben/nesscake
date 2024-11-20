@@ -221,7 +221,7 @@ body {
 
 @media (max-width: 470px) {
 
-    .my-recipes {
+    .content-recipes {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
