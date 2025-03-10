@@ -7,9 +7,11 @@ export function Header() {
       <Link to="/">
         <img src={logo} className="header-logo" alt="nesscake" />
       </Link>
-      <Link className="header-link" to="/inspirations">Inspirations</Link>
-      <Link className="header-link" to="/recipes">Recettes</Link>
-      <Link className="header-link" to="/hacks">Astuces</Link>
+      <div className="header-links">
+        <Link className="header-link" to="/inspirations">Inspirations</Link>
+        <Link className="header-link" to="/recettes">Recettes</Link>
+        <Link className="header-link" to="/astuces">Astuces</Link>
+      </div>
     </header>
   );
 }

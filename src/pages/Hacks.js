@@ -10,11 +10,11 @@ import pancakes from '../images/pancakes.jpeg';
 import tiramisu from '../images/tiramisu.jpeg';
 
 
-function Hacks() {
+function Astuces() {
     return (
         <div className="hack">
             <Header />
-            <h1 className="title-hacks">Les nesscake astuce's</h1>
+            <h1 className="title-hacks">Nesscake's astuces</h1>
             <div className="hacks">
                 <div className="my-hacks">
                     <h2><span className="underline">Génoise</span></h2>
@@ -64,5 +64,5 @@ function Hacks() {
     );
 }
 
-export default Hacks;
+export default Astuces;
 

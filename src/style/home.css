@@ -60,21 +60,33 @@ body {
 
 /* Header */
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+
 .header-logo {
   height: 10em;
+  margin: 1em;
   border-radius: 20em;
   border: #6C4A34 solid 3px;
-  margin: 1em;
+  margin-left: 1em;
+}
+
+.header-links {
+  display: flex;
+  gap: 1em;
+  margin-right: 1em;
 }
 
 .header-link {
-  position: relative;
   text-decoration: none;
   font-family: "Handmade";
-  left: 34em;
   font-size: 1.5em;
-  padding: 1.5em;
   color: #A64A93;
+  padding: 0.5em;
 }
 
 .header-link:hover {
@@ -228,6 +240,7 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  bottom: 0;
 }
 
 .footer img {

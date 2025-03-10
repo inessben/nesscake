@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 import { Frames } from '../components/frames.js';
-import { About } from '../components/about.js';
+// import { About } from '../components/about.js';
 import '../style/home.css';
 
 import actu1 from '../images/actu1.png';
@@ -44,6 +44,7 @@ function Home() {
                         </a>
                     </div>
                 </div>
+                <Frames />
                 <Footer />
             </div>
         </div>

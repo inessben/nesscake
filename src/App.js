@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inspirations from './pages/Inspirations.js';
-import Recipes from './pages/Recipes.js';
-import Hacks from './pages/Hacks.js';
+import Recettes from './pages/Recipes.js';
+import Astuces from './pages/Hacks.js';
 import Home from './pages/Home.js';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/inspirations" element={<Inspirations />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/hacks" element={<Hacks />} />
+        <Route path="/recettes" element={<Recettes />} />
+        <Route path="/astuces" element={<Astuces />} />
       </Routes>
     </Router>
   );

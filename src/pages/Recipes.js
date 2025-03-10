@@ -16,11 +16,11 @@ import { Crepes } from '../recipes/crepes.js';
 import { Gaufres } from '../recipes/gaufres.js';
 import { Cookies } from '../recipes/cookies.js';
 
-function Recipes() {
+function Recettes() {
     return (
         <div className="recipes">
             <Header />
-            <h1 className="title-recipes">Les nesscake recette's</h1>
+            <h1 className="title-recipes">Nesscake's recettes</h1>
             <div className="content-recipes">
                 <div className="my-recipes">
                     <Pancakes />
@@ -45,4 +45,4 @@ function Recipes() {
     );
 }
 
-export default Recipes;
+export default Recettes;
