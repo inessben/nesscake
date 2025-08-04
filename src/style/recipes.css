@@ -1,90 +1,225 @@
-/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@font-face {
-    font-family: "Handmade";
-    src: url("../fonts/handmade.woff2");
+/* Modern Recipes Page Styles */
+
+.recipes-page {
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #DDD1B5 0%, #E8E4DC 100%); */
 }
 
-@font-face {
-    font-family: "Grand-hotel";
-    src: url("../fonts/grand-hotel.woff2");
-}
-
-@font-face {
-    font-family: "Amatic";
-    src: url("../fonts/amatic.woff2");
-}
-
-/* ScrollBar */
-
-::-webkit-scrollbar {
-    width: 18px;
-}
-
-::-webkit-scrollbar-track {
-    background: #DDD1B5;
-}
-
-::-webkit-scrollbar-thumb {
-    z-index: 99;
-    background-color: #6C4A3499;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    opacity: 0.7;
-}
-
-.active {
-    font-weight: 900;
-}
-
-/* All */
-
-body {
+.recipes-hero {
+    background: linear-gradient(135deg, #A64A93, #D788C3);
+    color: white;
+    padding: 4rem 0 2rem;
+    text-align: center;
     position: relative;
-    scroll-behavior: smooth;
-    left: 2em;
-    width: 90vw;
-    height: 100vh;
-    background: #e8e4dc;
-    background-attachment: fixed;
+    overflow: hidden;
 }
 
-/* Header */
+.recipes-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="10" cy="10" r="2"/></g></svg>');
+    opacity: 0.3;
+}
 
-.header {
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.recipes-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    justify-content: center;
+    gap: 1rem;
+    line-height: 1.2;
 }
 
-.header-logo {
-    height: 10em;
-    margin: 1em;
-    border-radius: 20em;
-    border: #6C4A34 solid 3px;
-    margin-left: 1em;
+.recipes-title i {
+    font-size: 2.5rem;
+    opacity: 0.9;
 }
 
-.header-links {
+.recipes-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.recipes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.recipes-filters {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipes-filters h3 {
+    margin: 0 0 1rem 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.category-buttons {
     display: flex;
-    gap: 1em;
-    margin-right: 1em;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
-.header-link {
-    text-decoration: none;
-    font-family: "Handmade";
-    font-size: 1.5em;
-    color: #A64A93;
-    padding: 0.5em;
+.category-btn {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #6c757d;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
 }
 
-.header-link:hover {
-    opacity: 0.7;
-    text-decoration: underline;
+.category-btn:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    background: #A64A93;
+    border-color: #A64A93;
+    color: white;
+    box-shadow: 0 4px 15px rgba(166, 74, 147, 0.3);
+}
+
+.recipes-stats {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6c757d;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #6c757d;
+}
+
+.no-results i {
+    font-size: 4rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.no-results p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipes-title {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .recipes-title i {
+        font-size: 2rem;
+    }
+
+    .recipes-subtitle {
+        font-size: 1rem;
+    }
+
+    .recipes-hero {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .recipes-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .recipes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .category-buttons {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipes-title {
+        font-size: 1.8rem;
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .recipes-filters {
+        padding: 1rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .no-results {
+        padding: 3rem 1.5rem;
+    }
+
+    .no-results i {
+        font-size: 3rem;
+    }
 }
 
 /* Recipes Page */
@@ -94,7 +229,6 @@ body {
     margin-top: 0.5em;
     font-size: 2em;
     left: 1em;
-    font-family: "Grand-hotel";
     color: #D788C3;
     text-decoration: #D788C3 underline;
 }
@@ -118,12 +252,11 @@ body {
     border: 3px solid #6C4A34;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.8em;
-    font-family: "Handmade";
     color: #6C4A34;
 }
 
 .recipes-card {
-    font-family: "Handmade";
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 0.8em;
 
 }
@@ -187,7 +320,6 @@ body {
     right: -1em;
     width: 2em;
     height: 2em;
-    font-family: Arial, Helvetica, sans-serif;
     background: #D788C3;
     border-radius: 50%;
     border: 1px solid #DDD1B5;

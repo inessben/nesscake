@@ -1,165 +1,225 @@
-/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
-@font-face {
-    font-family: "Handmade";
-    src: url("../fonts/handmade.woff2");
-}
-
-@font-face {
-    font-family: "Grand-hotel";
-    src: url("../fonts/grand-hotel.woff2");
-}
-
-@font-face {
-    font-family: "Amatic";
-    src: url("../fonts/amatic.woff2");
+/* Variables pour les couleurs Nesscake */
+:root {
+  --nesscake-primary: #A64A93;
+  --nesscake-secondary: #D788C3;
+  --nesscake-light: #FEF7FF;
+  --nesscake-gradient: linear-gradient(135deg, #A64A93 0%, #D788C3 100%);
+  --nesscake-gradient-light: linear-gradient(135deg, #FEF7FF 0%, #EBD2F5 100%);
 }
 
 
-/* ScrollBar */
 
-::-webkit-scrollbar {
-    width: 18px;
+/* Global Styles */
+.inspirations-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
 
-::-webkit-scrollbar-track {
-    background: #DDD1B5;
+/* Carousel Gallery */
+.carousel-gallery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-    z-index: 99;
-    background-color: #6C4A3499;
-    border-radius: 4px;
+.carousel-btn {
+  background: var(--nesscake-gradient);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(166, 74, 147, 0.3);
+  flex-shrink: 0;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    opacity: 0.7;
+.carousel-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(166, 74, 147, 0.5);
 }
 
-.active {
-    font-weight: 900;
+.carousel-btn:active {
+  transform: scale(0.95);
 }
 
-/* All */
-
-body {
-    position: relative;
-    scroll-behavior: smooth;
-    left: 2em;
-    width: 90vw;
-    height: 100vh;
-    background: #e8e4dc;
-    background-attachment: fixed;
+.gallery-images-container {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
 }
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
+.gallery-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(166, 74, 147, 0.2);
+  background: white;
+  padding: 10px;
+  min-height: 300px;
 }
 
-.header-logo {
-    height: 10em;
-    margin: 1em;
-    border-radius: 20em;
-    border: #6C4A34 solid 3px;
-    margin-left: 1em;
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.header-links {
-    display: flex;
-    gap: 1em;
-    margin-right: 1em;
+.gallery-image:hover {
+  transform: scale(1.05);
 }
 
-.header-link {
-    text-decoration: none;
-    font-family: "Handmade";
-    font-size: 1.5em;
-    color: #A64A93;
-    padding: 0.5em;
+/* Gallery Counter */
+.gallery-counter {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--nesscake-primary);
+  font-weight: 600;
+  margin: 20px 0 40px 0;
 }
 
-.header-link:hover {
-    opacity: 0.7;
-    text-decoration: underline;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-images-container {
+    gap: 12px;
+  }
+
+  .gallery-image-wrapper {
+    min-height: 250px;
+  }
+
+  .gallery-image {
+    max-height: 350px;
+  }
 }
 
-/* Inspiration Page */
+@media (max-width: 768px) {
+  .inspirations-title {
+    font-size: 2.5rem;
+  }
 
-.title-inspirations {
-    position: relative;
-    font-size: 2em;
-    margin-top: 0.5em;
-    left: 1em;
-    font-family: "Grand-hotel";
-    color: #D788C3;
-    text-decoration: #D788C3 underline;
+  .carousel-gallery {
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .gallery-images-container {
+    gap: 10px;
+  }
+
+  .gallery-image-wrapper {
+    min-height: 200px;
+  }
+
+  .gallery-image {
+    max-height: 300px;
+  }
 }
 
-.my-inspirations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+@media (max-width: 480px) {
+  .inspirations-hero {
+    padding: 60px 15px 30px;
+  }
+  
+  .inspirations-title {
+    font-size: 2rem;
+  }
+  
+  .carousel-gallery {
+    gap: 8px;
+    padding: 0 8px;
+    margin: 20px auto;
+  }
+  
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  
+  .gallery-images-container {
+    gap: 8px;
+    min-width: 0;
+  }
+  
+  .gallery-image-wrapper {
+    min-height: 180px;
+    padding: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .gallery-image {
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery-counter {
+    font-size: 1rem;
+    margin: 15px 0 30px 0;
+  }
 }
 
-.inspiration {
-    display: flex;
-    margin: 2.2em;
-    border-radius: 1em;
-    height: 22em;
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    border: 4px solid #DDD1B5;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Inspiration page in responsive */
-
-@media (max-width: 665px) {
-    .inspiration {
-        height: 35em;
-    }
-}
-
-@media (max-width: 446px) {
-
-    .title-inspirations {
-        font-size: 1.6em;
-    }
-
-    .my-inspirations {
-        margin-left: -0.8em;
-    }
-}
-
-@media (max-width: 422px) {
-
-    .title-inspirations {
-        font-size: 1.6em;
-    }
-
-    .inspiration {
-        height: 28em;
-    }
-
-    .title-inspirations {
-        font-size: 1.6em;
-    }
-
-    .my-inspirations {
-        margin-left: -1.2em;
-    }
-}
-
-@media (max-width: 370px) {
-    .title-inspirations {
-        font-size: 1.4em;
-    }
-
-    .my-inspirations {
-        margin-left: -2em;
-    }
+@media (max-width: 360px) {
+  .inspirations-hero {
+    padding: 50px 10px 25px;
+  }
+  
+  .inspirations-title {
+    font-size: 1.8rem;
+  }
+  
+  .carousel-gallery {
+    gap: 6px;
+    padding: 0 5px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .gallery-images-container {
+    gap: 6px;
+  }
+  
+  .gallery-image-wrapper {
+    min-height: 160px;
+    padding: 6px;
+  }
+  
+  .gallery-image {
+    max-height: 220px;
+  }
 }

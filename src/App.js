@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './style/global.css';
 import Inspirations from './pages/Inspirations.js';
 import Recettes from './pages/Recipes.js';
 import Astuces from './pages/Hacks.js';

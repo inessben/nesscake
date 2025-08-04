@@ -1,187 +1,478 @@
-/* Fonts */
-
-@font-face {
-    font-family: "Handmade";
-    src: url("../fonts/handmade.woff2");
-}
-
-@font-face {
-    font-family: "Grand-hotel";
-    src: url("../fonts/grand-hotel.woff2");
-}
-
-@font-face {
-    font-family: "Amatic";
-    src: url("../fonts/amatic.woff2");
+/* Variables CSS pour les couleurs Nesscake */
+:root {
+    --nesscake-primary: #A64A93;
+    --nesscake-secondary: #D788C3;
+    --nesscake-light: #FEF7FF;
+    --nesscake-gradient: linear-gradient(135deg, #A64A93 0%, #D788C3 100%);
+    --nesscake-gradient-light: linear-gradient(135deg, #FEF7FF 0%, #EBD2F5 100%);
+    --shadow-light: rgba(166, 74, 147, 0.1);
+    --shadow-medium: rgba(166, 74, 147, 0.3);
 }
 
 /* ScrollBar */
-
 ::-webkit-scrollbar {
-    width: 18px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #DDD1B5;
+    background: #f1f1f1;
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-    z-index: 99;
-    background-color: #6C4A3499;
-    border-radius: 4px;
+    background: var(--nesscake-secondary);
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    opacity: 0.7;
+    background: var(--nesscake-primary);
 }
 
-.active {
-    font-weight: 900;
+/* Reset et Base */
+* {
+    box-sizing: border-box;
 }
 
-/* All */
+.hacks-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
 
-body {
+/* Hero Section */
+.hacks-hero {
+    color: white;
+    padding: 100px 20px 60px;
+    text-align: center;
     position: relative;
-    scroll-behavior: smooth;
-    left: 2em;
-    width: 90vw;
-    height: 100vh;
-    background: #e8e4dc;
-    background-attachment: fixed;
+    overflow: hidden;
 }
 
-/* Header */
+.hacks-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.03"><polygon points="15,0 30,15 15,30 0,15"/></g></svg>');
+    opacity: 0.4;
+}
 
-.header {
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hacks-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hacks-title i {
+    font-size: 0.8em;
+    opacity: 0.9;
+}
+
+.hacks-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Container Principal */
+.hacks-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* Intro */
+.hacks-intro {
+    margin-bottom: 50px;
+}
+
+.intro-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.intro-card h2 {
+    color: var(--nesscake-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.intro-card h2 i {
+    color: var(--nesscake-secondary);
+    font-size: 1.3rem;
+}
+
+.intro-card p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Grille des Hacks */
+.hacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hack-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.hack-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.hack-card-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hack-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hack-card:hover .hack-card-image {
+    transform: scale(1.05);
+}
+
+.hack-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(166, 74, 147, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hack-card:hover .hack-card-overlay {
+    opacity: 1;
+}
+
+.hack-card-overlay i {
+    font-size: 3rem;
+    color: white;
+}
+
+.hack-card-content {
+    padding: 25px;
+    width: 100%;
+}
+
+.hack-card-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
-}
-
-.header-logo {
-    height: 10em;
-    margin: 1em;
-    border-radius: 20em;
-    border: #6C4A34 solid 3px;
-    margin-left: 1em;
-}
-
-.header-links {
-    display: flex;
-    gap: 1em;
-    margin-right: 1em;
-}
-
-.header-link {
-    text-decoration: none;
-    font-family: "Handmade";
-    font-size: 1.5em;
-    color: #A64A93;
-    padding: 0.5em;
-}
-
-.header-link:hover {
-    opacity: 0.7;
-    text-decoration: underline;
-}
-
-
-/* Hacks page */
-
-.title-hacks {
-    position: relative;
-    font-size: 2em;
-    margin-top: 0.5em;
-    left: 1em;
-    font-family: "Grand-hotel";
-    color: #D788C3;
-    text-decoration: #D788C3 underline;
-}
-
-.generate-image {
-    width: 10em;
-    border-radius: 1.5em;
-}
-
-.hacks {
-    display: flex;
+    margin-bottom: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
+}
+
+.hack-category {
+    background: var(--nesscake-gradient);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hack-difficulty {
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hack-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.hack-card-tip {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    word-wrap: break-word;
+}
+
+.hack-card-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tip-label {
+    display: flex;
     align-items: center;
+    gap: 8px;
+    color: var(--nesscake-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.my-hacks {
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
+.tip-label i {
+    font-size: 0.8rem;
+}
+
+/* CTA Section */
+.hacks-cta {
+    margin-top: 50px;
+}
+
+.cta-card {
+    background: var(--nesscake-gradient);
+    color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
     text-align: center;
-    background-color: #A64A93;
-    padding: 0.6em;
-    margin: 1em;
-    width: 16em;
-    height: 20em;
-    border: 4px solid #D788C3;
-    font-size: 1.2em;
-    border-radius: 1.6em;
-    font-family: "Handmade";
-    color: #DDD1B5;
-    transition: transform 0.4s;
+    box-shadow: 0 15px 40px var(--shadow-medium);
+    width: 100%;
+    max-width: 100%;
 }
 
+.cta-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-/* Hacks page in responsive */
+.cta-card h2 i {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
 
-@media (max-width: 1190px) {
-    .my-hacks {
+.cta-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: var(--nesscake-primary);
+}
+
+.cta-btn.primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hacks-hero {
+        padding: 80px 15px 50px;
+    }
+
+    .hacks-title {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hacks-title i {
+        font-size: 2rem;
+    }
+
+    .hacks-subtitle {
+        font-size: 1rem;
+    }
+
+    .hacks-container {
+        padding: 30px 15px;
+    }
+
+    .hacks-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .intro-card {
+        padding: 25px 20px;
+    }
+
+    .hack-card-content {
+        padding: 20px;
+    }
+
+    .hack-card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cta-btn {
         width: 100%;
-        font-size: 1.5em;
-        height: 17em;
-        padding: 1em;
+        max-width: 250px;
+        justify-content: center;
+    }
+
+    .cta-card {
+        padding: 30px 20px;
     }
 }
 
-@media (max-width: 770px) {
-    .my-hacks {
-        font-size: 1em;
-        height: 18em;
-
-    }
-}
-
-@media (max-width: 568px) {
-    .my-hacks {
-        width: 20em;
-        height: 20em;
-    }
-}
-
-
-@media (max-width: 446px) {
-
-    .title-hacks {
-        font-size: 1.6em;
+@media (max-width: 480px) {
+    .hacks-hero {
+        padding: 60px 10px 40px;
     }
 
-    .my-hacks {
-        margin-left: -0.6em;
-    }
-}
-
-@media (max-width: 400px) {
-    .title-hacks {
-        font-size: 1.6em;
-    }
-}
-
-@media (max-width: 370px) {
-    .title-hacks {
-        font-size: 1.4em;
+    .hacks-title {
+        font-size: 1.8rem;
     }
 
-    .my-hacks {
-        width: 18em;
+    .hacks-container {
+        padding: 20px 10px;
+    }
+
+    .hacks-grid {
+        gap: 20px;
+    }
+
+    .intro-card {
+        padding: 20px 15px;
+    }
+
+    .intro-card h2 {
+        font-size: 1.3rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hack-card-content {
+        padding: 15px;
+    }
+
+    .hack-card-title {
+        font-size: 1.2rem;
+    }
+
+    .hack-card-tip {
+        font-size: 0.9rem;
+    }
+
+    .cta-card {
+        padding: 25px 15px;
+    }
+
+    .cta-card h2 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cta-card p {
+        font-size: 1rem;
     }
 }

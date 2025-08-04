@@ -1,33 +1,43 @@
 import React from 'react';
-import instagram from '../images/instagram.png';
-import whatsapp from '../images/whatsapp.png';
-import mail from '../images/mail.png';
+import '../style/footer.css';
 
 export function Footer() {
     return (
         <footer className="footer">
-            {/* Instagram */}
-            <div className="instagram">
-                <a href="https://www.instagram.com/nsscake/" target="_blank" rel="noreferrer">
-                    <img src={instagram} alt="logo" />
-                    <h4 className='description'>nsscake</h4>
-                </a>
-            </div>
+            <div className="footer-content">
+                <div className="footer-social">
+                    <a
+                        href="https://www.instagram.com/nsscake/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="social-link"
+                        title="Suivez-moi sur Instagram"
+                    >
+                        <i className="fab fa-instagram"></i>
+                    </a>
 
-            {/* Mail */}
-            <div className="mail">
-                <a href="mailto:contact.nsscake@gmail.com">
-                    <img src={mail} alt="logo" />
-                    <h4 className='description'>contact.nsscake@gmail.com</h4>
-                </a>
-            </div>
+                    <a
+                        href="mailto:contact.nsscake@gmail.com"
+                        className="social-link"
+                        title="Contactez-moi par email"
+                    >
+                        <i className="fas fa-envelope"></i>
+                    </a>
 
-            {/* WhatsApp */}
-            <div className="whatsapp">
-                <a href="https://wa.me/0648112836" target="_blank" rel="noreferrer">
-                    <img src={whatsapp} alt="logo" />
-                    <h4 className='description'>06 48 11 28 36</h4>
-                </a>
+                    <a
+                        href="https://wa.me/33648112836"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="social-link"
+                        title="Contactez-moi sur WhatsApp"
+                    >
+                        <i className="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div className="footer-copyright">
+                    <p>&copy; 2024 Nesscake – Fait avec amour et beaucoup de sucre.</p>
+                </div>
             </div>
         </footer>
     );

@@ -22,7 +22,7 @@ function Home() {
                         <a href="https://www.instagram.com/faysitiscookies/" target="_blank" rel="noreferrer">
                             <img src={actu1} className="image" alt="image" />
                             <div className="image-overlay">
-                                <p>Les meilleurs cookies de la capitale qui innove avec des cookies salé, à tester absolument - <br />Fay’siTis (75011)</p>
+                                <p>Les meilleurs cookies de la capitale qui innove avec des cookies salés, à tester absolument - <u>Fay’siTis (75011)</u></p>
                             </div>
                         </a>
                     </div>
@@ -30,16 +30,15 @@ function Home() {
                         <a href="https://www.instagram.com/lapepinieredesbatignolles/" target="_blank" rel="noreferrer">
                             <img src={actu2} className="image" alt="image" />
                             <div className="image-overlay">
-                                <p>Le café où tu peux télétravailler et boire l’un des meilleurs latté de Paris - <br />La pépinière des Batignolles (75017)</p>
+                                <p>Le café où tu peux télétravailler et boire l’un des meilleurs lattés de Paris - <br /><u>La pépinière des Batignolles (75017)</u></p>
                             </div>
                         </a>
                     </div>
                     <div className="image-container">
                         <a href="https://www.instagram.com/saon.comedyclub/" target="_blank" rel="noreferrer">
-
                             <img src={actu3} className="image" alt="image" />
                             <div className="image-overlay">
-                                <p>Un resto où tu peux manger un bon thaï et regarder des humoristes faire des sketch - <br />Saon Thaï (94270)</p>
+                                <p>Un resto où tu peux manger un bon thaï et regarder des humoristes faire des sketchs - <u>Saon Thaï (94270)</u></p>
                             </div>
                         </a>
                     </div>
