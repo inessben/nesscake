@@ -18,8 +18,8 @@
 }
 
 .search-bar:focus-within {
-    border-color: #ff6b6b;
-    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.2);
+    border-color: #A64A93;
+    box-shadow: 0 4px 20px rgba(166, 74, 147, 0.2);
     transform: translateY(-2px);
 }
 

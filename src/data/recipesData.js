@@ -6,7 +6,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '15 min',
         servings: '4 personnes',
-        image: 'https://via.placeholder.com/400x200/ff6b6b/ffffff?text=Pancakes',
+        image: '/src/images/pancakes.jpeg',
         description: 'Des pancakes moelleux et délicieux pour un petit-déjeuner parfait.',
         ingredients: [
             '2 œufs',
@@ -27,13 +27,223 @@ export const recipesData = [
         tags: ['œufs', 'farine', 'lait', 'vanille', 'levure', 'sucre']
     },
     {
+        id: 'fraisier',
+        name: 'Fraisier',
+        category: 'Desserts',
+        difficulty: 'Facile',
+        cookingTime: '30 min',
+        servings: '6 personnes',
+        image: '/src/images/fraisier.jpeg',
+        description: 'Un classique gâteau fraisier avec une délicieuse crème mousseline.',
+        ingredients: [
+            '300g de fraises',
+            '200g de crème pâtissière',
+            '250g de génoise',
+            '100g de sucre',
+            "1 verre d'eau",
+            '10g de gélatine'
+        ],
+        instructions: [
+            'Préparer la génoise et laisser refroidir.',
+            "Préparer la crème mousseline en mélangeant la crème pâtissière et le beurre.",
+            'Couper les fraises en tranches.',
+            'Assembler le gâteau en alternant les couches de génoise, crème et fraises.',
+            'Laisser prendre au réfrigérateur.'
+        ],
+        tags: ['fraise', 'crème', 'génoise', 'sucre']
+    },
+    {
+        id: 'molly-cake',
+        name: 'Molly Cake',
+        category: 'Desserts',
+        difficulty: 'Moyen',
+        cookingTime: '80 min',
+        servings: '8 personnes',
+        image: '/src/images/genoise.jpeg',
+        description: 'Un gâteau moelleux souvent utilisé comme base de cake design.',
+        ingredients: [
+            '3 œufs',
+            '250g de sucre',
+            '250g de farine',
+            '250ml de crème liquide 30%',
+            '10g de levure chimique',
+            'Arôme de vanille'
+        ],
+        instructions: [
+            "Battre les œufs, le sucre et l'arôme pendant 12 minutes.",
+            'Ajouter la farine tamisée et la levure.',
+            'Monter en chantilly la crème liquide et l\'ajouter au mélange.',
+            'Cuire à 160 degrés pendant 1h15mn.',
+            'Laisser refroidir sous un torchon propre.'
+        ],
+        tags: ['farine', 'crème', 'sucre', 'vanille']
+    },
+    {
+        id: 'genoise',
+        name: 'Génoise',
+        category: 'Desserts',
+        difficulty: 'Moyen',
+        cookingTime: '55 min',
+        servings: '8 personnes',
+        image: '/src/images/genoise.jpeg',
+        description: 'Base aérienne idéale pour de nombreux desserts.',
+        ingredients: [
+            '6 œufs',
+            '160g de sucre',
+            '160g de farine',
+            '10g de levure chimique',
+            'Arôme de vanille'
+        ],
+        instructions: [
+            'Battre les œufs et le sucre jusqu\'à blanchiment.',
+            'Ajouter la farine tamisée et la levure.',
+            'Cuire à 160 degrés pendant 55 minutes.',
+            'Laisser refroidir et filmer.'
+        ],
+        tags: ['farine', 'œufs', 'sucre', 'vanille']
+    },
+    {
+        id: 'creme-beurre',
+        name: 'Crème au Beurre',
+        category: 'Couverture',
+        difficulty: 'Facile',
+        cookingTime: '20 min',
+        servings: 'Pour 1 gâteau',
+        image: '/src/images/creme-au-beurre.jpeg',
+        description: 'Crème riche et savoureuse pour la décoration de gâteaux.',
+        ingredients: [
+            '400g de lait concentré',
+            '500g de beurre',
+            'Arôme de vanille'
+        ],
+        instructions: [
+            'Battez le beurre jusqu\'à ce qu\'il blanchisse.',
+            'Ajouter le lait concentré et l\'arôme.',
+            'Continuez de battre jusqu\'à ce que la crème soit lisse.'
+        ],
+        tags: ['beurre', 'sucre', 'lait']
+    },
+    {
+        id: 'ganache-montee',
+        name: 'Ganache Montée',
+        category: 'Couverture',
+        difficulty: 'Moyen',
+        cookingTime: '12h de repos',
+        servings: 'Pour 1 gâteau',
+        image: '/src/images/ganache-montee.jpeg',
+        description: 'Texture légère pour un dessert parfait.',
+        ingredients: [
+            '300g de chocolat',
+            '300ml de crème liquide 30%'
+        ],
+        instructions: [
+            'Chauffer une partie de la crème liquide.',
+            'Ajouter le chocolat et mélanger.',
+            'Ajouter le reste de crème froide.',
+            'Réfrigérer toute la nuit puis fouetter.'
+        ],
+        tags: ['chocolat', 'crème']
+    },
+    {
+        id: 'caramel-beurre-sale',
+        name: 'Caramel au Beurre Salé',
+        category: 'Sauce',
+        difficulty: 'Moyen',
+        cookingTime: '15 min',
+        servings: '250ml',
+        image: '/src/images/caramel-beurre-sale.jpeg',
+        description: 'Délicieux caramel crémeux au beurre salé.',
+        ingredients: [
+            '300g de sucre',
+            '150g de beurre',
+            '1 pincée de fleur de sel',
+            '300ml de crème liquide 30%'
+        ],
+        instructions: [
+            "Faire fondre le sucre jusqu'à brunissement.",
+            'Ajouter le beurre et le sel.',
+            'Incorporer la crème.',
+            'Conserver au frais.'
+        ],
+        tags: ['caramel', 'sucre', 'beurre']
+    },
+    {
+        id: 'chantilly-mascarpone',
+        name: 'Chantilly Mascarpone',
+        category: 'Couverture',
+        difficulty: 'Facile',
+        cookingTime: '10 min',
+        servings: 'Pour 1 gâteau',
+        image: '/src/images/chantilly.jpeg',
+        description: 'Une chantilly onctueuse avec du mascarpone.',
+        ingredients: [
+            '40g de sucre',
+            '500g de mascarpone',
+            '500ml de crème liquide entière',
+            'Arôme de vanille'
+        ],
+        instructions: [
+            'Battre la mascarpone, le sucre et l\'arôme.',
+            'Incorporer la crème liquide.',
+            'Prête à l\'utilisation.'
+        ],
+        tags: ['crème', 'mascarpone', 'sucre']
+    },
+    {
+        id: 'creme-noisette',
+        name: 'Crème à la Noisette',
+        category: 'Couverture',
+        difficulty: 'Facile',
+        cookingTime: '15 min',
+        servings: 'Pour 1 gâteau',
+        image: '/src/images/creme-noisette.jpeg',
+        description: 'Une crème délicate au goût intense de noisettes.',
+        ingredients: [
+            '1 œuf',
+            '250g de beurre',
+            '100g de sucre',
+            '150g de noisette en poudre',
+            'Arôme d\'amande amère'
+        ],
+        instructions: [
+            'Travailler le beurre en pommade.',
+            'Ajouter le sucre et l\'œuf.',
+            'Incorporer la noisette en poudre.',
+            'Travailler avec une marise.'
+        ],
+        tags: ['beurre', 'noisette', 'sucre']
+    },
+    {
+        id: 'crumble',
+        name: 'Crumble',
+        category: 'Desserts',
+        difficulty: 'Facile',
+        cookingTime: '25 min',
+        servings: '6 personnes',
+        image: '/src/images/crumble.jpeg',
+        description: 'Dessert fruité avec un croustillant doré.',
+        ingredients: [
+            '300g de fruits',
+            '200g de farine',
+            '150g de sucre',
+            '150g de beurre'
+        ],
+        instructions: [
+            'Préchauffer le four à 180°C.',
+            'Préparer le mélange de crumble.',
+            'Répartir sur les fruits.',
+            'Cuire jusqu\'à dorure.'
+        ],
+        tags: ['fruits', 'farine', 'beurre', 'sucre']
+    },
+    {
         id: 'brownies',
         name: 'Brownies',
         category: 'Desserts',
-        difficulty: 'Facile', 
+        difficulty: 'Facile',
         cookingTime: '25 min',
         servings: '8 personnes',
-        image: 'https://via.placeholder.com/400x200/8B4513/ffffff?text=Brownies',
+        image: '/src/images/brownie.jpeg',
         description: 'Brownies au chocolat fondants et irrésistibles.',
         ingredients: [
             '200g de chocolat noir',
@@ -59,7 +269,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '30 min + repos',
         servings: '6 personnes',
-        image: 'https://via.placeholder.com/400x200/D2691E/ffffff?text=Tiramisu',
+        image: '/src/images/tiramisu.jpeg',
         description: 'Le célèbre dessert italien avec mascarpone et café.',
         ingredients: [
             '500g de mascarpone',
@@ -88,7 +298,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '12 min',
         servings: '20 cookies',
-        image: 'https://via.placeholder.com/400x200/DEB887/000000?text=Cookies',
+        image: '/src/images/cookies.jpeg',
         description: 'Cookies moelleux aux pépites de chocolat.',
         ingredients: [
             '200g de farine',
@@ -117,7 +327,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '20 min',
         servings: '4 personnes',
-        image: 'https://via.placeholder.com/400x200/F4A460/ffffff?text=Crepes',
+        image: '/src/images/crepes.jpeg',
         description: 'Crêpes fines et délicieuses pour toute occasion.',
         ingredients: [
             '250g de farine',
@@ -143,7 +353,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '20 min',
         servings: '12 cupcakes',
-        image: 'https://via.placeholder.com/400x200/FFB6C1/000000?text=Cupcakes',
+        image: '/src/images/cupcakes.jpeg',
         description: 'Petits gâteaux moelleux avec glaçage coloré.',
         ingredients: [
             '150g de farine',
@@ -171,7 +381,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '12 min',
         servings: '6 personnes',
-        image: 'https://via.placeholder.com/400x200/8B4513/ffffff?text=Fondant',
+        image: '/src/images/fondant-chocolat.jpeg',
         description: 'Moelleux au chocolat avec cœur coulant irrésistible.',
         ingredients: [
             '200g de chocolat noir',
@@ -197,7 +407,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '15 min',
         servings: '4 personnes',
-        image: 'https://via.placeholder.com/400x200/DAA520/ffffff?text=Gaufres',
+        image: '/src/images/gaufres.jpeg',
         description: 'Gaufres croustillantes et moelleuses.',
         ingredients: [
             '250g de farine',
@@ -216,6 +426,32 @@ export const recipesData = [
             'Cuire dans un gaufrier chaud.'
         ],
         tags: ['farine', 'œufs', 'lait', 'beurre', 'sucre', 'levure']
+    },
+    {
+        id: 'creme-mousseline',
+        name: 'Crème Mousseline',
+        category: 'Couverture',
+        difficulty: 'Moyen',
+        cookingTime: '30 min',
+        servings: 'Pour 1 gâteau',
+        image: '/src/images/creme-mousseline.jpeg',
+        description: 'Crème pâtissière enrichie de beurre, légère et savoureuse.',
+        ingredients: [
+            '500ml de lait',
+            '6 jaunes d\'œufs',
+            '125g de sucre',
+            '50g de maïzena',
+            '200g de beurre',
+            'Arôme de vanille'
+        ],
+        instructions: [
+            'Préparer la crème pâtissière avec lait, jaunes, sucre et maïzena.',
+            'Laisser refroidir complètement.',
+            'Travailler le beurre en pommade.',
+            'Incorporer progressivement la crème pâtissière au beurre.',
+            'Fouetter jusqu\'à obtenir une texture lisse et aérée.'
+        ],
+        tags: ['crème', 'beurre', 'œufs', 'lait', 'vanille']
     }
 ];
 
@@ -225,9 +461,9 @@ export const getRecipeById = (id) => {
 
 export const searchRecipes = (searchTerm) => {
     if (!searchTerm) return recipesData;
-    
+
     const term = searchTerm.toLowerCase();
-    return recipesData.filter(recipe => 
+    return recipesData.filter(recipe =>
         recipe.name.toLowerCase().includes(term) ||
         recipe.category.toLowerCase().includes(term) ||
         recipe.tags.some(tag => tag.toLowerCase().includes(term)) ||

@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import '../style/hacks.css';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
+import { SearchBar } from '../components/SearchBar.js';
 
 const hacksData = [
     {
         id: 1,
-        title: 'Génoise Moelleuse',
+        title: 'Génoise',
         category: 'Bases',
-        image: 'https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Genoise',
+        image: '/src/images/genoise.jpeg',
         tip: 'Pour garder votre génoise moelleuse, enroulez-la dans un torchon jusqu\'à qu\'elle refroidisse pour ensuite la cellophaner.',
         icon: 'fas fa-birthday-cake',
         difficulty: 'Intermédiaire'
     },
     {
         id: 2,
-        title: 'Pancakes Américains',
+        title: 'Pancakes',
         category: 'Technique',
-        image: 'https://via.placeholder.com/300x200/F4A460/ffffff?text=Pancakes',
+        image: '/src/images/pancakes.jpeg',
         tip: 'Mettez votre pâte à pancakes dans une bouteille vide. Faites un trou sur le bouchon pour pouvoir faire des ronds parfaits sur la poêle.',
         icon: 'fas fa-circle',
         difficulty: 'Facile'
@@ -26,16 +27,16 @@ const hacksData = [
         id: 3,
         title: 'Tiramisu',
         category: 'Repos',
-        image: 'https://via.placeholder.com/300x200/D2691E/ffffff?text=Tiramisu',
+        image: '/src/images/tiramisu.jpeg',
         tip: 'Après 24h au frais, le tiramisu a toujours meilleur goût. Les biscuits cuillère sont plus adaptés que les boudoirs pour les tiramisus.',
         icon: 'fas fa-clock',
         difficulty: 'Intermédiaire'
     },
     {
         id: 4,
-        title: 'Ganache Gourmande',
+        title: 'Ganache',
         category: 'Créme',
-        image: 'https://via.placeholder.com/300x200/8B4513/ffffff?text=Ganache',
+        image: '/src/images/ganache-montee.jpeg',
         tip: 'Mélanger les chocolats noirs, blanc et au lait pour plus de gourmandises !',
         icon: 'fas fa-heart',
         difficulty: 'Intermédiaire'
@@ -44,7 +45,7 @@ const hacksData = [
         id: 5,
         title: 'Cupcakes',
         category: 'Matériel',
-        image: 'https://via.placeholder.com/300x200/FFB6C1/000000?text=Cupcakes',
+        image: '/src/images/cupcakes.jpeg',
         tip: 'Si vous n\'avez plus de disques à cupcakes, vous pouvez utiliser du papier cuisson découpé en petits carrés à introduire dans les moules.',
         icon: 'fas fa-lightbulb',
         difficulty: 'Facile'
@@ -53,16 +54,16 @@ const hacksData = [
         id: 6,
         title: 'Fondant au Chocolat',
         category: 'Astuce',
-        image: 'https://via.placeholder.com/300x200/8B4513/ffffff?text=Fondant',
+        image: '/src/images/fondant-chocolat.jpeg',
         tip: 'Dans les fondants individuels, mettez un carré de chocolat (ou de Kinder) directement dans le moule avant cuisson.',
         icon: 'fas fa-surprise',
         difficulty: 'Facile'
     },
     {
         id: 7,
-        title: 'Chantilly Parfaite',
+        title: 'Chantilly',
         category: 'Timing',
-        image: 'https://via.placeholder.com/300x200/FFF8DC/000000?text=Chantilly',
+        image: '/src/images/chantilly.jpeg',
         tip: 'Faites toujours votre crème mascarpone 5mn avant utilisation. Plus vous la laissez au frais, moins elle sera utilisable.',
         icon: 'fas fa-stopwatch',
         difficulty: 'Facile'
@@ -70,6 +71,43 @@ const hacksData = [
 ];
 
 function Astuces() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('Toutes');
+
+    // Obtenir toutes les catégories uniques
+    const categories = ['Toutes', ...new Set(hacksData.map(hack => hack.category))];
+
+    // Filtrer les astuces en fonction de la recherche et de la catégorie
+    const filteredHacks = useMemo(() => {
+        let filtered = hacksData;
+
+        // Filtrer par terme de recherche
+        if (searchTerm) {
+            const term = searchTerm.toLowerCase();
+            filtered = filtered.filter(hack =>
+                hack.title.toLowerCase().includes(term) ||
+                hack.category.toLowerCase().includes(term) ||
+                hack.tip.toLowerCase().includes(term) ||
+                hack.difficulty.toLowerCase().includes(term)
+            );
+        }
+
+        // Filtrer par catégorie
+        if (selectedCategory !== 'Toutes') {
+            filtered = filtered.filter(hack => hack.category === selectedCategory);
+        }
+
+        return filtered;
+    }, [searchTerm, selectedCategory]);
+
+    const handleSearch = (term) => {
+        setSearchTerm(term);
+    };
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+    };
+
     const getDifficultyColor = (difficulty) => {
         switch (difficulty) {
             case 'Facile': return '#28a745';
@@ -86,9 +124,38 @@ function Astuces() {
 
 
             <div className="hacks-container">
+                <SearchBar
+                    onSearch={handleSearch}
+                    placeholder="Rechercher une astuce, catégorie ou technique..."
+                />
 
-                <div className="hacks-grid">
-                    {hacksData.map(hack => (
+                <div className="hacks-filters">
+                    <h3>Filtrer par catégorie :</h3>
+                    <div className="category-buttons">
+                        {categories.map(category => (
+                            <button
+                                key={category}
+                                className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+                                onClick={() => handleCategoryChange(category)}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="hacks-stats">
+                    <p>
+                        {filteredHacks.length === hacksData.length
+                            ? `${hacksData.length} astuces disponibles`
+                            : `${filteredHacks.length} astuce${filteredHacks.length > 1 ? 's' : ''} trouvée${filteredHacks.length > 1 ? 's' : ''}`
+                        }
+                    </p>
+                </div>
+
+                {filteredHacks.length > 0 ? (
+                    <div className="hacks-grid">
+                        {filteredHacks.map(hack => (
                         <div key={hack.id} className="hack-card">
                             <div className="hack-card-header">
                                 <img
@@ -124,8 +191,15 @@ function Astuces() {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="no-results">
+                        <i className="fas fa-search"></i>
+                        <h3>Aucune astuce trouvée</h3>
+                        <p>Essayez de modifier vos critères de recherche ou de choisir une autre catégorie.</p>
+                    </div>
+                )}
 
                 <div className="hacks-cta">
                     <div className="cta-card">
