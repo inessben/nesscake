@@ -2,12 +2,9 @@ import React from 'react';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 import { Frames } from '../components/frames.js';
-// import { About } from '../components/about.js';
 import '../style/home.css';
 
-import actu1 from '../images/actu1.png';
-import actu2 from '../images/actu2.png';
-import actu3 from '../images/actu3.png';
+import { getImagePath } from '../utils/imageUtils.js';
 
 
 function Home() {
@@ -20,7 +17,7 @@ function Home() {
                 <div className="images">
                     <div className="image-container">
                         <a href="https://www.instagram.com/faysitiscookies/" target="_blank" rel="noreferrer">
-                            <img src={actu1} className="image" alt="image" />
+                            <img src={getImagePath('actu1.png')} className="image" alt="image" />
                             <div className="image-overlay">
                                 <p>Les meilleurs cookies de la capitale qui innove avec des cookies salés, à tester absolument - <u>Fay’siTis (75011)</u></p>
                             </div>
@@ -28,7 +25,7 @@ function Home() {
                     </div>
                     <div className="image-container">
                         <a href="https://www.instagram.com/lapepinieredesbatignolles/" target="_blank" rel="noreferrer">
-                            <img src={actu2} className="image" alt="image" />
+                            <img src={getImagePath('actu2.png')} className="image" alt="image" />
                             <div className="image-overlay">
                                 <p>Le café où tu peux télétravailler et boire l’un des meilleurs lattés de Paris - <br /><u>La pépinière des Batignolles (75017)</u></p>
                             </div>
@@ -36,7 +33,7 @@ function Home() {
                     </div>
                     <div className="image-container">
                         <a href="https://www.instagram.com/saon.comedyclub/" target="_blank" rel="noreferrer">
-                            <img src={actu3} className="image" alt="image" />
+                            <img src={getImagePath('actu3.png')} className="image" alt="image" />
                             <div className="image-overlay">
                                 <p>Un resto où tu peux manger un bon thaï et regarder des humoristes faire des sketchs - <u>Saon Thaï (94270)</u></p>
                             </div>

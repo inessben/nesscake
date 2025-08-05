@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../images/logo.png';
+import { getImagePath } from '../utils/imageUtils.js';
 import '../style/header.css';
 
 export function Header() {
@@ -22,12 +22,10 @@ export function Header() {
   return (
     <header className="modern-header">
       <div className="header-container">
-        {/* Logo */}
         <Link to="/" className="header-logo-link" onClick={closeMenu}>
-          <img src={logo} className="header-logo-img" alt="Nesscake" />
+          <img src={getImagePath('logo.png')} className="header-logo-img" alt="Nesscake" />
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="desktop-nav">
           <Link
             className={`nav-link ${isActive('/recettes') ? 'active' : ''}`}
@@ -52,7 +50,6 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -64,7 +61,6 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
         <nav className="mobile-nav">
 
@@ -95,7 +91,6 @@ export function Header() {
         </nav>
       </div>
 
-      {/* Overlay */}
       {isMenuOpen && (
         <div className="menu-overlay" onClick={closeMenu}></div>
       )}

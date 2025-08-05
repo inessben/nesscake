@@ -1,3 +1,5 @@
+import { getImagePath } from '../utils/imageUtils.js';
+
 export const recipesData = [
     {
         id: 'pancakes',
@@ -6,7 +8,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '15 min',
         servings: '4 personnes',
-        image: '/src/images/pancakes.jpeg',
+        image: getImagePath('pancakes.jpeg'),
         description: 'Des pancakes moelleux et délicieux pour un petit-déjeuner parfait.',
         ingredients: [
             '2 œufs',
@@ -33,7 +35,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '30 min',
         servings: '6 personnes',
-        image: '/src/images/fraisier.jpeg',
+        image: getImagePath('fraisier.jpeg'),
         description: 'Un classique gâteau fraisier avec une délicieuse crème mousseline.',
         ingredients: [
             '300g de fraises',
@@ -59,7 +61,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '80 min',
         servings: '8 personnes',
-        image: '/src/images/genoise.jpeg',
+        image: getImagePath('genoise.jpeg'),
         description: 'Un gâteau moelleux souvent utilisé comme base de cake design.',
         ingredients: [
             '3 œufs',
@@ -85,7 +87,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '55 min',
         servings: '8 personnes',
-        image: '/src/images/genoise.jpeg',
+        image: getImagePath('genoise.jpeg'),
         description: 'Base aérienne idéale pour de nombreux desserts.',
         ingredients: [
             '6 œufs',
@@ -109,7 +111,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '20 min',
         servings: 'Pour 1 gâteau',
-        image: '/src/images/creme-au-beurre.jpeg',
+        image: getImagePath('creme-au-beurre.jpeg'),
         description: 'Crème riche et savoureuse pour la décoration de gâteaux.',
         ingredients: [
             '400g de lait concentré',
@@ -130,7 +132,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '12h de repos',
         servings: 'Pour 1 gâteau',
-        image: '/src/images/ganache-montee.jpeg',
+        image: getImagePath('ganache-montee.jpeg'),
         description: 'Texture légère pour un dessert parfait.',
         ingredients: [
             '300g de chocolat',
@@ -151,7 +153,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '15 min',
         servings: '250ml',
-        image: '/src/images/caramel-beurre-sale.jpeg',
+        image: getImagePath('caramel-beurre-sale.jpeg'),
         description: 'Délicieux caramel crémeux au beurre salé.',
         ingredients: [
             '300g de sucre',
@@ -174,7 +176,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '10 min',
         servings: 'Pour 1 gâteau',
-        image: '/src/images/chantilly.jpeg',
+        image: getImagePath('chantilly.jpeg'),
         description: 'Une chantilly onctueuse avec du mascarpone.',
         ingredients: [
             '40g de sucre',
@@ -196,7 +198,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '15 min',
         servings: 'Pour 1 gâteau',
-        image: '/src/images/creme-noisette.jpeg',
+        image: getImagePath('creme-noisette.jpeg'),
         description: 'Une crème délicate au goût intense de noisettes.',
         ingredients: [
             '1 œuf',
@@ -220,7 +222,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '25 min',
         servings: '6 personnes',
-        image: '/src/images/crumble.jpeg',
+        image: getImagePath('crumble.jpeg'),
         description: 'Dessert fruité avec un croustillant doré.',
         ingredients: [
             '300g de fruits',
@@ -243,7 +245,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '25 min',
         servings: '8 personnes',
-        image: '/src/images/brownie.jpeg',
+        image: getImagePath('brownie.jpeg'),
         description: 'Brownies au chocolat fondants et irrésistibles.',
         ingredients: [
             '200g de chocolat noir',
@@ -269,7 +271,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '30 min + repos',
         servings: '6 personnes',
-        image: '/src/images/tiramisu.jpeg',
+        image: getImagePath('tiramisu.jpeg'),
         description: 'Le célèbre dessert italien avec mascarpone et café.',
         ingredients: [
             '500g de mascarpone',
@@ -298,7 +300,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '12 min',
         servings: '20 cookies',
-        image: '/src/images/cookies.jpeg',
+        image: getImagePath('cookies.jpeg'),
         description: 'Cookies moelleux aux pépites de chocolat.',
         ingredients: [
             '200g de farine',
@@ -327,7 +329,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '20 min',
         servings: '4 personnes',
-        image: '/src/images/crepes.jpeg',
+        image: getImagePath('crepes.jpeg'),
         description: 'Crêpes fines et délicieuses pour toute occasion.',
         ingredients: [
             '250g de farine',
@@ -353,7 +355,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '20 min',
         servings: '12 cupcakes',
-        image: '/src/images/cupcakes.jpeg',
+        image: getImagePath('cupcakes.jpeg'),
         description: 'Petits gâteaux moelleux avec glaçage coloré.',
         ingredients: [
             '150g de farine',
@@ -381,7 +383,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '12 min',
         servings: '6 personnes',
-        image: '/src/images/fondant-chocolat.jpeg',
+        image: getImagePath('fondant-chocolat.jpeg'),
         description: 'Moelleux au chocolat avec cœur coulant irrésistible.',
         ingredients: [
             '200g de chocolat noir',
@@ -407,7 +409,7 @@ export const recipesData = [
         difficulty: 'Facile',
         cookingTime: '15 min',
         servings: '4 personnes',
-        image: '/src/images/gaufres.jpeg',
+        image: getImagePath('gaufres.jpeg'),
         description: 'Gaufres croustillantes et moelleuses.',
         ingredients: [
             '250g de farine',
@@ -434,7 +436,7 @@ export const recipesData = [
         difficulty: 'Moyen',
         cookingTime: '30 min',
         servings: 'Pour 1 gâteau',
-        image: '/src/images/creme-mousseline.jpeg',
+        image: getImagePath('creme-mousseline.jpeg'),
         description: 'Crème pâtissière enrichie de beurre, légère et savoureuse.',
         ingredients: [
             '500ml de lait',

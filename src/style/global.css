@@ -1,4 +1,3 @@
-/* Global Modern Styles for Nesscake */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
@@ -21,7 +20,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Mobile Header */
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
@@ -53,7 +51,6 @@ body {
     }
 }
 
-/* Common Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;

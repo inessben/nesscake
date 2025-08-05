@@ -1,4 +1,3 @@
-/* Modern Header with Nesscake Colors */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .modern-header {
@@ -18,7 +17,6 @@
     position: relative;
 }
 
-/* Logo */
 .header-logo-link {
     text-decoration: none;
     z-index: 1001;
@@ -42,7 +40,6 @@
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Desktop Navigation */
 .desktop-nav {
     display: flex;
     gap: 0.5rem;
@@ -82,7 +79,6 @@
     font-size: 0.9rem;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -124,14 +120,12 @@
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 280px;
     height: 100vh;
-    /* background: linear-gradient(180deg, #A64A93, #6C4A34); */
     background: white;
     padding: 6rem 2rem 2rem;
     transition: right 0.3s ease;
@@ -181,7 +175,6 @@
     width: 20px;
 }
 
-/* Menu Overlay */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -194,7 +187,6 @@
 }
 
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .desktop-nav {
         gap: 0.25rem;

@@ -3,44 +3,35 @@ import '../style/inspirations.css';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 
-import greenCookies from '../images/green-cookies.png';
-import pinacolaCake from '../images/pinacolacake.png';
-import spiderCake from '../images/spidercake.png';
-import heartCake from '../images/heart-cake.png';
-import floweredCake from '../images/flowered-cake.png';
-import cupCakes from '../images/psf-cupcakes.png';
-import kinderCupcakes from '../images/kinder-cupcakes.png';
+import { getImagePath } from '../utils/imageUtils.js';
 
 const inspirationsImages = [
-    greenCookies,
-    floweredCake,
-    pinacolaCake,
-    spiderCake,
-    heartCake,
-    cupCakes,
-    kinderCupcakes
+    getImagePath('green-cookies.png'),
+    getImagePath('flowered-cake.png'),
+    getImagePath('pinacolacake.png'),
+    getImagePath('spidercake.png'),
+    getImagePath('heart-cake.png'),
+    getImagePath('psf-cupcakes.png'),
+    getImagePath('kinder-cupcakes.png')
 ];
 
 function Inspirations() {
     const [currentPageIndex, setCurrentPageIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
 
-    // Déterminer le nombre d'images par page selon la taille d'écran
     const getImagesPerPage = () => {
-        if (windowWidth <= 480) return 1;  // Mobile : 1 image
-        if (windowWidth <= 768) return 2;  // Tablette : 2 images
-        if (windowWidth <= 1024) return 3; // Petit desktop : 3 images
-        return 4; // Grand desktop : 4 images
+        if (windowWidth <= 480) return 1;
+        if (windowWidth <= 768) return 2;
+        if (windowWidth <= 1024) return 3;
+        return 4;
     };
 
     const imagesPerPage = getImagesPerPage();
     const totalPages = Math.ceil(inspirationsImages.length / imagesPerPage);
 
-    // Écouter les changements de taille d'écran
     React.useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
-            // Reset à la première page quand la taille change
             setCurrentPageIndex(0);
         };
 
@@ -60,7 +51,6 @@ function Inspirations() {
         );
     };
 
-    // Calculer les images à afficher pour la page actuelle
     const getCurrentPageImages = () => {
         const startIndex = currentPageIndex * imagesPerPage;
         const endIndex = startIndex + imagesPerPage;

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.nesscake.fr/sitemap.xml
+
+# Pages importantes à crawler en priorité
+Allow: /recettes
+Allow: /astuces
+Allow: /inspirations
+
+# Ressources statiques
+Allow: /images/
+Allow: /icon/
+
+# Optimisation du crawl
+Crawl-delay: 1

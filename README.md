@@ -18,7 +18,7 @@
 
 - **Frontend** : [React.js](https://reactjs.org/) avec [Vite](https://vitejs.dev/)
 - **Routing** : [React Router](https://reactrouter.com/)
-- **Backend** (à venir) : API Node.js / Firebase / CMS headless (selon ton choix)
+- **Backend** (à venir) : API Node.js 
 - **Déploiement** : [Vercel](https://vercel.com/) 
 
 ---

@@ -3,13 +3,14 @@ import '../style/hacks.css';
 import { Header } from '../components/header.js';
 import { Footer } from '../components/footer.js';
 import { SearchBar } from '../components/SearchBar.js';
+import { getImagePath } from '../utils/imageUtils.js';
 
 const hacksData = [
     {
         id: 1,
         title: 'Génoise',
         category: 'Bases',
-        image: '/src/images/genoise.jpeg',
+        image: getImagePath('genoise.jpeg'),
         tip: 'Pour garder votre génoise moelleuse, enroulez-la dans un torchon jusqu\'à qu\'elle refroidisse pour ensuite la cellophaner.',
         icon: 'fas fa-birthday-cake',
         difficulty: 'Intermédiaire'
@@ -18,7 +19,7 @@ const hacksData = [
         id: 2,
         title: 'Pancakes',
         category: 'Technique',
-        image: '/src/images/pancakes.jpeg',
+        image: getImagePath('pancakes.jpeg'),
         tip: 'Mettez votre pâte à pancakes dans une bouteille vide. Faites un trou sur le bouchon pour pouvoir faire des ronds parfaits sur la poêle.',
         icon: 'fas fa-circle',
         difficulty: 'Facile'
@@ -27,7 +28,7 @@ const hacksData = [
         id: 3,
         title: 'Tiramisu',
         category: 'Repos',
-        image: '/src/images/tiramisu.jpeg',
+        image: getImagePath('tiramisu.jpeg'),
         tip: 'Après 24h au frais, le tiramisu a toujours meilleur goût. Les biscuits cuillère sont plus adaptés que les boudoirs pour les tiramisus.',
         icon: 'fas fa-clock',
         difficulty: 'Intermédiaire'
@@ -36,7 +37,7 @@ const hacksData = [
         id: 4,
         title: 'Ganache',
         category: 'Créme',
-        image: '/src/images/ganache-montee.jpeg',
+        image: getImagePath('ganache-montee.jpeg'),
         tip: 'Mélanger les chocolats noirs, blanc et au lait pour plus de gourmandises !',
         icon: 'fas fa-heart',
         difficulty: 'Intermédiaire'
@@ -45,7 +46,7 @@ const hacksData = [
         id: 5,
         title: 'Cupcakes',
         category: 'Matériel',
-        image: '/src/images/cupcakes.jpeg',
+        image: getImagePath('cupcakes.jpeg'),
         tip: 'Si vous n\'avez plus de disques à cupcakes, vous pouvez utiliser du papier cuisson découpé en petits carrés à introduire dans les moules.',
         icon: 'fas fa-lightbulb',
         difficulty: 'Facile'
@@ -54,7 +55,7 @@ const hacksData = [
         id: 6,
         title: 'Fondant au Chocolat',
         category: 'Astuce',
-        image: '/src/images/fondant-chocolat.jpeg',
+        image: getImagePath('fondant-chocolat.jpeg'),
         tip: 'Dans les fondants individuels, mettez un carré de chocolat (ou de Kinder) directement dans le moule avant cuisson.',
         icon: 'fas fa-surprise',
         difficulty: 'Facile'
@@ -63,7 +64,7 @@ const hacksData = [
         id: 7,
         title: 'Chantilly',
         category: 'Timing',
-        image: '/src/images/chantilly.jpeg',
+        image: getImagePath('chantilly.jpeg'),
         tip: 'Faites toujours votre crème mascarpone 5mn avant utilisation. Plus vous la laissez au frais, moins elle sera utilisable.',
         icon: 'fas fa-stopwatch',
         difficulty: 'Facile'
@@ -74,14 +75,10 @@ function Astuces() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('Toutes');
 
-    // Obtenir toutes les catégories uniques
     const categories = ['Toutes', ...new Set(hacksData.map(hack => hack.category))];
 
-    // Filtrer les astuces en fonction de la recherche et de la catégorie
     const filteredHacks = useMemo(() => {
         let filtered = hacksData;
-
-        // Filtrer par terme de recherche
         if (searchTerm) {
             const term = searchTerm.toLowerCase();
             filtered = filtered.filter(hack =>
@@ -91,8 +88,6 @@ function Astuces() {
                 hack.difficulty.toLowerCase().includes(term)
             );
         }
-
-        // Filtrer par catégorie
         if (selectedCategory !== 'Toutes') {
             filtered = filtered.filter(hack => hack.category === selectedCategory);
         }
